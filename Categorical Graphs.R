@@ -56,12 +56,12 @@ p2 <- ggplot(freq.fun(credit$credit_his), aes(x = cat.var, y = Freq, fill = Defa
 
 p3 <- ggplot(freq.fun(credit$present_emp), aes(x = cat.var, y = Freq, fill = Default)) + 
   geom_bar(stat = "identity") + xlab(NULL) + ylab(NULL) + coord_flip() +
-  ggtitle('Purpose') + theme(plot.title=element_text(size=10))+
+  ggtitle('Present Employment') + theme(plot.title=element_text(size=10))+
   geom_text(aes(y = pos, label = label), size=2)
 
 p4 <- ggplot(freq.fun(credit$sex), aes(x = cat.var, y = Freq, fill = Default))+
   geom_bar(stat = "identity") + xlab(NULL) + ylab(NULL) + coord_flip() +
-  ggtitle('Saving Account') + theme(plot.title=element_text(size=10))+
+  ggtitle('Sex and Marital Status') + theme(plot.title=element_text(size=10))+
   geom_text(aes(y = pos, label = label), size=2)
 
 grid_arrange_shared_legend(p1, p2, p3, p4)
